@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import Header from "../components/Header";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
-import MainFeaturedNews from "../components/main_page/MainFeaturedNews";
 import Grid from "@material-ui/core/Grid";
 import News from "../components/main_page/News";
 import Footer from "../components/Footer";

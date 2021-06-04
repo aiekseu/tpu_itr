@@ -9,6 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import itr_logo from '../images/itr_logo.png'
 import {Hidden, Menu, MenuItem} from "@material-ui/core";
 import {Link} from "react-router-dom";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
     toolbar: {
@@ -22,12 +23,25 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: '48px',
         margin: 8
     },
+    toolbarTitleGrid: {
+        fontFamily: 'Open Sans',
+        marginTop: 'auto',
+        marginBottom: 'auto',
+        marginLeft: 16,
+    },
     toolbarTitle: {
         fontFamily: 'Open Sans',
-        fontWeight: 600,
-        marginLeft: 16,
-        marginTop: 'auto',
-        marginBottom: 'auto'
+        fontWeight: 500,
+        margin: 0,
+        padding: 0,
+        lineHeight: 0.95
+    },
+    toolbarSubtitle: {
+        fontFamily: 'Open Sans',
+        fontWeight: 300,
+        margin: 0,
+        padding: 0,
+        lineHeight: 1.15
     },
     nav: {
         right: 0,
@@ -90,16 +104,32 @@ export default function Header(props) {
             <Toolbar className={classes.toolbar}>
                 <div className={classes.name}>
                     <img src={itr_logo} alt='ТПУ ИШИТР' className={classes.logo}/>
-                    <Typography
-                        component="h2"
-                        variant="h5"
-                        color="inherit"
-                        align="center"
-                        noWrap
-                        className={classes.toolbarTitle}
-                    >
-                        ИШИТР
-                    </Typography>
+                    <Grid container direction='column' justify='center' className={classes.toolbarTitleGrid}>
+                        <Grid item>
+                            <Typography
+                                component="h2"
+                                variant="h5"
+                                color="inherit"
+                                align="center"
+                                noWrap
+                                className={classes.toolbarTitle}
+                            >
+                                ИШИТР
+                            </Typography>
+                        </Grid>
+                        <Grid item>
+                            <Typography
+                                component="h2"
+                                variant="h6"
+                                color="inherit"
+                                align="center"
+                                noWrap
+                                className={classes.toolbarSubtitle}
+                            >
+                                Магистратура
+                            </Typography>
+                        </Grid>
+                    </Grid>
                 </div>
                 <Hidden smDown>
                     <div className={classes.nav}>

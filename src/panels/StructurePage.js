@@ -6,8 +6,10 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import React from "react";
 
+import {sections} from "../data/NavigationSections";
 
-const StructurePage = ({sections}) => {
+
+const StructurePage = () => {
 
     return (
         <React.Fragment>
